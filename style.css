@@ -47,7 +47,7 @@ figure:hover .icon-view{
     left:0;
     right:0;
     bottom:0;
-    background-color:#07f0f0;
+    background-color:hsla(178, 100%, 50%, 0.455);;
     border-radius: 10px;
 }
 .picture-container:hover .overlay{
