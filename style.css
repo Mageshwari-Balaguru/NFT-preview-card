@@ -1,0 +1,139 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+:root{
+    --Soft-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+    --blue-main-BG: hsl(217, 54%, 11%);
+    --blue-card-BG: hsl(216, 50%, 16%);
+    --blue-line: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+}
+body {
+    background-color: var(--blue-main-BG);
+    font-family: 'outfit',sans-serif;
+}
+.container{
+    display: flex;
+    justify-content: center;
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    justify-content: center;
+    background-color: var(--blue-card-BG);
+    margin:3rem;
+    border-radius: 10px;
+}
+.card-img {
+    border-radius:20px;
+
+}
+figure{
+    position:relative;
+    cursor:pointer;
+}
+figure:hover .icon-view{
+    visibility: visible;
+}
+.overlay{
+    visibility:hidden;
+    position:absolute;
+    content:'';
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color:#07f0f0;
+    border-radius: 10px;
+}
+.picture-container:hover .overlay{
+    visibility:visible;
+    opacity: 1;
+}
+.icon-view{
+    visibility: hidden;
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+}
+.time-price{
+    display:flex;
+    justify-content: space-between;
+    border-bottom: 2px solid var(--blue-line);
+}
+.price{
+    align-self: flex-start;
+    padding-left:5px;
+
+}
+
+.time{
+    align-self: flex-end;
+    padding-left:70px;
+}
+
+.author{
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+}
+
+.container h2{
+    color:var(--White);
+}
+.container h2:hover{
+    color:var(--Cyan);
+    cursor:pointer;
+}
+.price{
+    color:var(--Cyan);
+}
+.softblue{
+    color:var(--Soft-blue);
+}
+.author a{
+    color:var(--White);
+    text-decoration: none;
+}
+.author a:hover{
+    color:var(--Cyan);
+}
+.author img{
+    width:40px;
+    height:40px;
+    border:2px solid white;
+    border-radius: 100%;
+}
+.author p{
+    padding-left:20px;
+}
+.padding{
+    padding: 10px;
+}
+.padding-bottom{
+    padding-bottom: 20px;
+}
+@media only screen and (max-width:300px) {
+    .wrapper {
+        max-width: 200px;
+    }
+    .card-img {
+        max-width:200px;
+    }
+    
+}
+@media only screen and (max-width:1500px) and (min-width:300px) {
+    .wrapper {
+        max-width: 300px;
+    }
+    .card-img {
+        max-width:300px;
+    }
+    
+}
+
